@@ -1,3 +1,5 @@
-<app-search (searchValue)="searchVal = $event"></app-search>
+<div class="container">
+  <app-search (searchValue)="searchVal = $event"></app-search>
 
-<app-table [value]="searchVal"></app-table>
+  <app-table [value]="searchVal"></app-table>
+</div>
