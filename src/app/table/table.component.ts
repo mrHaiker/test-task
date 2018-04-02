@@ -20,7 +20,7 @@ export class TableComponent implements OnInit, OnChanges {
     { date: new Date() , value: [{
         Country_name: '2',
         League_name: '2',
-        Belgium: '2',
+        Match_status: '2',
         Match_date: '2',
         Match_time: '2',
       }]},

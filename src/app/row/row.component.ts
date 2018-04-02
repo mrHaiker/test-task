@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class RowData {
   Country_name: string;
   League_name: string;
-  Belgium: string;
+  Match_status: string;
   Match_date: string;
   Match_time: string;
 }
@@ -18,7 +18,6 @@ export class RowComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('value', this.value);
   }
 
 }

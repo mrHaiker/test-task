@@ -1,18 +1,18 @@
 <form class="row" [formGroup]="search">
-  <input type="text" placeholder="From">
-  <input type="text" placeholder="to">
+  <input class="search__input" type="text" placeholder="From">
+  <input class="search__input" type="text" placeholder="to">
 
-  <select formControlName="country">
-    <option value="0">Select country</option>
+  <select class="search__input" formControlName="country">
+    <option value="">Select country</option>
     <option value="1">Ukraine</option>
     <option value="2">Russia</option>
   </select>
 
-  <select formControlName="league">
-    <option value="0">Select league</option>
+  <select class="search__input" formControlName="league">
+    <option value="">Select league</option>
     <option value="1">Super Car</option>
     <option value="2">Ne Super Car</option>
   </select>
 
-  <button type="button" (click)="searchFunc()">Search</button>
+  <button class="search__btn" type="button" (click)="searchFunc()">Search</button>
 </form>
