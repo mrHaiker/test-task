@@ -24,6 +24,7 @@ export class TableComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
+    console.log('thisValue', this.value);
     if (isUndefined(this.value)) return;
 
     this.service.getData(this.value['country'], this.value['league']).subscribe(

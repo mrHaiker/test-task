@@ -20,6 +20,7 @@
   background: #ececec;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .tab__list {
