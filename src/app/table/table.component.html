@@ -7,11 +7,21 @@
 </div>
 <div class="tab__list">
   <div class="row row__header">
-    <div class="row__item">{{'Country name'}}</div>
-    <div class="row__item">{{'League name'}}</div>
-    <div class="row__item">{{'Match status'}}</div>
-    <div class="row__item">{{'Match date'}}</div>
-    <div class="row__item">{{'Match time'}}</div>
+    <div class="row__item">country_id</div>
+    <div class="row__item">country_name</div>
+    <div class="row__item">league_id</div>
+    <div class="row__item">league_name</div>
+    <div class="row__item">match_awayteam_halftime_score</div>
+    <div class="row__item">match_awayteam_name</div>
+    <div class="row__item">match_awayteam_score</div>
+    <div class="row__item">match_date</div>
+    <div class="row__item">match_hometeam_halftime_score</div>
+    <div class="row__item">match_hometeam_name</div>
+    <div class="row__item">match_hometeam_score</div>
+    <div class="row__item">match_id</div>
+    <div class="row__item">match_live</div>
+    <div class="row__item">match_status</div>
+    <div class="row__item">match_time</div>
   </div>
   <app-row *ngFor="let selected of selectList" [value]="selected"></app-row>
 </div>

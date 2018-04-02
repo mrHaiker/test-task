@@ -1,12 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TeamResult } from '../app.service';
 
-export class RowData {
-  Country_name: string;
-  League_name: string;
-  Match_status: string;
-  Match_date: string;
-  Match_time: string;
-}
 
 @Component({
   selector: 'app-row',
@@ -14,7 +8,7 @@ export class RowData {
   styleUrls: ['./row.component.css']
 })
 export class RowComponent implements OnInit {
-  @Input() public value: RowData;
+  @Input() public value: TeamResult;
   constructor() { }
 
   ngOnInit() {

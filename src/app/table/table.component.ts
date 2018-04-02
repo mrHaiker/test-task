@@ -1,11 +1,10 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+import { AppService, TeamResult } from '../app.service';
 import { isUndefined } from 'util';
-import { RowData } from '../row/row.component';
 
 export class List {
   date: any;
-  value: RowData[];
+  value: TeamResult[];
 }
 
 @Component({
@@ -15,17 +14,8 @@ export class List {
 })
 export class TableComponent implements OnInit, OnChanges {
   @Input() value: any;
-  public selectList: RowData[] = [];
-  public list: List[] = [
-    { date: new Date() , value: [{
-        Country_name: '2',
-        League_name: '2',
-        Match_status: '2',
-        Match_date: '2',
-        Match_time: '2',
-      }]},
-    { date: new Date() , value: [new RowData()]}
-  ];
+  public selectList: TeamResult[] = [];
+  public list: List[] = [];
   constructor(
     private service: AppService
   ) { }
@@ -36,16 +26,17 @@ export class TableComponent implements OnInit, OnChanges {
   ngOnChanges() {
     if (isUndefined(this.value)) return;
 
-    this.service.getData(this.value['country'], this.value['country']).subscribe(
+    this.service.getData(this.value['country'], this.value['league']).subscribe(
       arr => {
+        console.log('arr', arr);
         if (!arr.length) return;
 
-        arr.map(data => {
-          this.list.push({
-            date: new Date(),
-            value: data
-          });
+        this.list.push({
+          date: new Date(),
+          value: arr
         });
+
+        this.selectList = arr;
       }
     );
   }
