@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.row__item {
+  display: flex;
+  flex: 1 0 0;
+  height: 40px;
+  align-content: center;
+  justify-content: center;
+}

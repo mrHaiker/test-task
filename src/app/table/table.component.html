@@ -1,0 +1,19 @@
+<div class="tab__row">
+  <div class="tab"
+       *ngFor="let item of list"
+       (click)="select(item)">
+    {{ item.date | date }}
+  </div>
+</div>
+<div class="tab__list">
+  <div class="row row__header">
+    <div class="row__item">{{ 'Country_name'}}</div>
+    <div class="row__item">{{ 'League_name'}}</div>
+    <div class="row__item">{{ 'Belgium'}}</div>
+    <div class="row__item">{{ 'Match_date'}}</div>
+    <div class="row__item">{{ 'Match_time'}}</div>
+  </div>
+  <app-row *ngFor="let selected of selectList" [value]="selected"></app-row>
+</div>
+
+
