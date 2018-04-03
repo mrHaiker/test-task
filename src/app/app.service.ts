@@ -5,10 +5,13 @@ import 'rxjs/add/operator/map';
 
 
 export class TeamResult {
+  cards: any[];
   country_id: string;
   country_name: string;
+  goalscorer: any[];
   league_id: string;
   league_name: string;
+  lineup: any;
   match_awayteam_halftime_score: string;
   match_awayteam_name: string;
   match_awayteam_score: string;
@@ -31,8 +34,8 @@ export class AppService {
     private http: Http
   ) { }
 
-  getData(firstTeam, secondTeam): Observable<TeamResult[]> {
-    return this.http.get(`${this.api}?action=get_H2H&firstTeam=${firstTeam}&secondTeam=${secondTeam}&APIkey=${this.key}`)
-      .map(res => res.json()['firstTeam_VS_secondTeam']);
+  getData(country, league): Observable<TeamResult[]> {
+    return this.http.get(`${this.api}?action=get_events&from=2016-10-30&to=2016-11-01&country_id=${country}&league_id=${league}&APIkey=${this.key}`)
+      .map(res => res.json());
   }
 }

@@ -1,19 +1,30 @@
 <form class="row" [formGroup]="search">
-  <input class="search__input" type="text" placeholder="From">
-  <input class="search__input" type="text" placeholder="to">
+  <div class="input-group">
+    <label class="search__label">Date From</label>
+    <input class="search__input" type="text" placeholder="From">
+  </div>
 
-  <select class="search__input" formControlName="country">
-    <option value="">Select country</option>
-    <option value="Chelsea">Chelsea</option>
-  </select>
+  <div class="input-group">
+    <label class="search__label">Date to</label>
+    <input class="search__input" type="text" placeholder="to">
+  </div>
 
-  <select class="search__input" formControlName="league">
-    <option value="">Select league</option>
-    <option value="Arsenal">Arsenal</option>
-    <option value="Bayer">Bayer</option>
-    <option value="Real">Real</option>
-    <option value="Barselona">Barselona</option>
-  </select>
+  <div class="input-group">
+    <label class="search__label">Select country</label>
+    <select class="search__input" formControlName="country">
+      <option value="197">Ukraine</option>
+    </select>
+  </div>
+
+
+  <div class="input-group">
+    <label class="search__label">Select league</label>
+    <select class="search__input" formControlName="league">
+      <option value="376">Arsenal</option>
+      <option value="70">62</option>
+    </select>
+  </div>
+
 
   <button class="search__btn" type="button" (click)="searchFunc()">Search</button>
 </form>

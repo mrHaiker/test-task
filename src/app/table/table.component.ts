@@ -27,7 +27,10 @@ export class TableComponent implements OnInit, OnChanges {
     console.log('thisValue', this.value);
     if (isUndefined(this.value)) return;
 
-    this.service.getData(this.value['country'], this.value['league']).subscribe(
+    this.service.getData(
+      this.value['country'],
+      this.value['league']
+    ).subscribe(
       arr => {
         console.log('arr', arr);
         if (!arr.length) return;
