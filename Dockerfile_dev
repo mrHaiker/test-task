@@ -1,5 +1,0 @@
-FROM node:8
-
-RUN npm install --save @angular/cli@1.7;
-
-EXPOSE 4200
