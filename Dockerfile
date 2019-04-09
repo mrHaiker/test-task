@@ -1,13 +1,14 @@
-FROM node:10
+FROM ubuntu
+
+RUN apt-get update
+
+RUN apt install nodejs -y
+
+RUN apt install npm -y
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
-
-RUN npm i --silent
-
 COPY . .
 
-EXPOSE 4800
+EXPOSE 4200
 
-CMD ["npm", "start"]
