@@ -1,11 +1,5 @@
 FROM node:10
 
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm i --silent
-
-COPY . .
+RUN npm i @angular/cli --silent
 
 EXPOSE 4200
